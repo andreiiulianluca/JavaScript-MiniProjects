@@ -42,7 +42,8 @@ const filterToDo = term => {
 
 };
 
-searchBar.addEventListener('keyup', () =>{
+searchBar.addEventListener("keyup", (e) =>{
+    e.preventDefault();
     const term = searchBar.value.trim().toLowerCase();
     filterToDo(term);
 });
